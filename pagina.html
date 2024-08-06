@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Periódica Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="periodic-table">
+        <div class="element" id="hydrogen" onclick="showElementDetails('H', 1, 0, 1)">
+            H
+        </div>
+        <div class="element" id="helium" onclick="showElementDetails('He', 2, 2, 2)">
+            He
+        </div>
+        <!-- Añadir más elementos aquí -->
+    </div>
+    <div id="element-details" class="element-details" style="display: none;">
+        <button onclick="closeElementDetails()">Cerrar</button>
+        <div id="element-content">
+            <!-- Aquí se mostrará la información del elemento -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
