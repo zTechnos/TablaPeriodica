@@ -3,25 +3,992 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla Periódica Interactiva</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tabla Periódica</title>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Tu contenido HTML aquí -->
+    
+        <script src="script.js"></script>
+    </body>
+        
 </head>
 <body>
     <div class="periodic-table">
-        <div class="element" id="hydrogen" onclick="showElementDetails('H', 1, 0, 1)">
-            H
+        <!-- Periodo 1 -->
+        <div class="period">
+            <div class="element" id="hydrogen" onclick="toggleDetails(this, 'H', 1, 1, 1)">
+                H
+                <div class="element-details">
+                    <p>Symbol: H</p>
+                    <p>Period: 1</p>
+                    <p>Group: 1</p>
+                    <img src="images/H.png" alt="Hydrogen Structure">
+                </div>
+            </div>
+            <div class="element" id="helium" onclick="toggleDetails(this, 'He', 2, 1, 18)">
+                He
+                <div class="element-details">
+                    <p>Symbol: He</p>
+                    <p>Period: 1</p>
+                    <p>Group: 18</p>
+                    <img src="images/He.png" alt="Helium Structure">
+                </div>
+            </div>
         </div>
-        <div class="element" id="helium" onclick="showElementDetails('He', 2, 2, 2)">
-            He
+
+        <!-- Periodo 2 -->
+        <div class="period">
+            <div class="element" id="lithium" onclick="toggleDetails(this, 'Li', 3, 2, 1)">
+                Li
+                <div class="element-details">
+                    <p>Symbol: Li</p>
+                    <p>Period: 2</p>
+                    <p>Group: 1</p>
+                    <img src="images/Li.png" alt="Lithium Structure">
+                </div>
+            </div>
+            <div class="element" id="beryllium" onclick="toggleDetails(this, 'Be', 4, 2, 2)">
+                Be
+                <div class="element-details">
+                    <p>Symbol: Be</p>
+                    <p>Period: 2</p>
+                    <p>Group: 2</p>
+                    <img src="images/Be.png" alt="Beryllium Structure">
+                </div>
+            </div>
+            <!-- Continúa con los demás elementos de este período -->
+            <div class="element" id="boron" onclick="toggleDetails(this, 'B', 5, 2, 13)">
+                B
+                <div class="element-details">
+                    <p>Symbol: B</p>
+                    <p>Period: 2</p>
+                    <p>Group: 13</p>
+                    <img src="images/B.png" alt="Boron Structure">
+                </div>
+            </div>
+            <div class="element" id="carbon" onclick="toggleDetails(this, 'C', 6, 2, 14)">
+                C
+                <div class="element-details">
+                    <p>Symbol: C</p>
+                    <p>Period: 2</p>
+                    <p>Group: 14</p>
+                    <img src="images/C.png" alt="Carbon Structure">
+                </div>
+            </div>
+            <div class="element" id="nitrogen" onclick="toggleDetails(this, 'N', 7, 2, 15)">
+                N
+                <div class="element-details">
+                    <p>Symbol: N</p>
+                    <p>Period: 2</p>
+                    <p>Group: 15</p>
+                    <img src="images/N.png" alt="Nitrogen Structure">
+                </div>
+            </div>
+            <div class="element" id="oxygen" onclick="toggleDetails(this, 'O', 8, 2, 16)">
+                O
+                <div class="element-details">
+                    <p>Symbol: O</p>
+                    <p>Period: 2</p>
+                    <p>Group: 16</p>
+                    <img src="images/O.png" alt="Oxygen Structure">
+                </div>
+            </div>
+            <div class="element" id="fluorine" onclick="toggleDetails(this, 'F', 9, 2, 17)">
+                F
+                <div class="element-details">
+                    <p>Symbol: F</p>
+                    <p>Period: 2</p>
+                    <p>Group: 17</p>
+                    <img src="images/F.png" alt="Fluorine Structure">
+                </div>
+            </div>
+            <div class="element" id="neon" onclick="toggleDetails(this, 'Ne', 10, 2, 18)">
+                Ne
+                <div class="element-details">
+                    <p>Symbol: Ne</p>
+                    <p>Period: 2</p>
+                    <p>Group: 18</p>
+                    <img src="images/Ne.png" alt="Neon Structure">
+                </div>
+            </div>
         </div>
-        <!-- Añadir más elementos aquí -->
+
+        <!-- Periodo 3 -->
+        <div class="period">
+            <div class="element" id="sodium" onclick="toggleDetails(this, 'Na', 11, 3, 1)">
+                Na
+                <div class="element-details">
+                    <p>Symbol: Na</p>
+                    <p>Period: 3</p>
+                    <p>Group: 1</p>
+                    <img src="images/Na.png" alt="Sodium Structure">
+                </div>
+            </div>
+            <div class="element" id="magnesium" onclick="toggleDetails(this, 'Mg', 12, 3, 2)">
+                Mg
+                <div class="element-details">
+                    <p>Symbol: Mg</p>
+                    <p>Period: 3</p>
+                    <p>Group: 2</p>
+                    <img src="images/Mg.png" alt="Magnesium Structure">
+                </div>
+            </div>
+            <div class="element" id="aluminum" onclick="toggleDetails(this, 'Al', 13, 3, 13)">
+                Al
+                <div class="element-details">
+                    <p>Symbol: Al</p>
+                    <p>Period: 3</p>
+                    <p>Group: 13</p>
+                    <img src="images/Al.png" alt="Aluminum Structure">
+                </div>
+            </div>
+            <div class="element" id="silicon" onclick="toggleDetails(this, 'Si', 14, 3, 14)">
+                Si
+                <div class="element-details">
+                    <p>Symbol: Si</p>
+                    <p>Period: 3</p>
+                    <p>Group: 14</p>
+                    <img src="images/Si.png" alt="Silicon Structure">
+                </div>
+            </div>
+            <div class="element" id="phosphorus" onclick="toggleDetails(this, 'P', 15, 3, 15)">
+                P
+                <div class="element-details">
+                    <p>Symbol: P</p>
+                    <p>Period: 3</p>
+                    <p>Group: 15</p>
+                    <img src="images/P.png" alt="Phosphorus Structure">
+                </div>
+            </div>
+            <div class="element" id="sulfur" onclick="toggleDetails(this, 'S', 16, 3, 16)">
+                S
+                <div class="element-details">
+                    <p>Symbol: S</p>
+                    <p>Period: 3</p>
+                    <p>Group: 16</p>
+                    <img src="images/S.png" alt="Sulfur Structure">
+                </div>
+            </div>
+            <div class="element" id="chlorine" onclick="toggleDetails(this, 'Cl', 17, 3, 17)">
+                Cl
+                <div class="element-details">
+                    <p>Symbol: Cl</p>
+                    <p>Period: 3</p>
+                    <p>Group: 17</p>
+                    <img src="images/Cl.png" alt="Chlorine Structure">
+                </div>
+            </div>
+            <div class="element" id="argon" onclick="toggleDetails(this, 'Ar', 18, 3, 18)">
+                Ar
+                <div class="element-details">
+                    <p>Symbol: Ar</p>
+                    <p>Period: 3</p>
+                    <p>Group: 18</p>
+                    <img src="images/Ar.png" alt="Argon Structure">
+                </div>
+            </div>
+        </div>
+
+        <!-- Periodo 4 -->
+        <div class="period">
+            <div class="element" id="potassium" onclick="toggleDetails(this, 'K', 19, 4, 1)">
+                K
+                <div class="element-details">
+                    <p>Symbol: K</p>
+                    <p>Period: 4</p>
+                    <p>Group: 1</p>
+                    <img src="images/K.png" alt="Potassium Structure">
+                </div>
+            </div>
+            <div class="element" id="calcium" onclick="toggleDetails(this, 'Ca', 20, 4, 2)">
+                Ca
+                <div class="element-details">
+                    <p>Symbol: Ca</p>
+                    <p>Period: 4</p>
+                    <p>Group: 2</p>
+                    <img src="images/Ca.png" alt="Calcium Structure">
+                </div>
+            </div>
+            <div class="element" id="scandium" onclick="toggleDetails(this, 'Sc', 21, 4, 3)">
+                Sc
+                <div class="element-details">
+                    <p>Symbol: Sc</p>
+                    <p>Period: 4</p>
+                    <p>Group: 3</p>
+                    <img src="images/Sc.png" alt="Scandium Structure">
+                </div>
+            </div>
+            <div class="element" id="titanium" onclick="toggleDetails(this, 'Ti', 22, 4, 4)">
+                Ti
+                <div class="element-details">
+                    <p>Symbol: Ti</p>
+                    <p>Period: 4</p>
+                    <p>Group: 4</p>
+                    <img src="images/Ti.png" alt="Titanium Structure">
+                </div>
+            </div>
+            <div class="element" id="vanadium" onclick="toggleDetails(this, 'V', 23, 4, 5)">
+                V
+                <div class="element-details">
+                    <p>Symbol: V</p>
+                    <p>Period: 4</p>
+                    <p>Group: 5</p>
+                    <img src="images/V.png" alt="Vanadium Structure">
+                </div>
+            </div>
+            <div class="element" id="chromium" onclick="toggleDetails(this, 'Cr', 24, 4, 6)">
+                Cr
+                <div class="element-details">
+                    <p>Symbol: Cr</p>
+                    <p>Period: 4</p>
+                    <p>Group: 6</p>
+                    <img src="images/Cr.png" alt="Chromium Structure">
+                </div>
+            </div>
+            <div class="element" id="manganese" onclick="toggleDetails(this, 'Mn', 25, 4, 7)">
+                Mn
+                <div class="element-details">
+                    <p>Symbol: Mn</p>
+                    <p>Period: 4</p>
+                    <p>Group: 7</p>
+                    <img src="images/Mn.png" alt="Manganese Structure">
+                </div>
+            </div>
+            <div class="element" id="iron" onclick="toggleDetails(this, 'Fe', 26, 4, 8)">
+                Fe
+                <div class="element-details">
+                    <p>Symbol: Fe</p>
+                    <p>Period: 4</p>
+                    <p>Group: 8</p>
+                    <img src="images/Fe.png" alt="Iron Structure">
+                </div>
+            </div>
+            <div class="element" id="cobalt" onclick="toggleDetails(this, 'Co', 27, 4, 9)">
+                Co
+                <div class="element-details">
+                    <p>Symbol: Co</p>
+                    <p>Period: 4</p>
+                    <p>Group: 9</p>
+                    <img src="images/Co.png" alt="Cobalt Structure">
+                </div>
+            </div>
+            <div class="element" id="nickel" onclick="toggleDetails(this, 'Ni', 28, 4, 10)">
+                Ni
+                <div class="element-details">
+                    <p>Symbol: Ni</p>
+                    <p>Period: 4</p>
+                    <p>Group: 10</p>
+                    <img src="images/Ni.png" alt="Nickel Structure">
+                </div>
+            </div>
+            <div class="element" id="copper" onclick="toggleDetails(this, 'Cu', 29, 4, 11)">
+                Cu
+                <div class="element-details">
+                    <p>Symbol: Cu</p>
+                    <p>Period: 4</p>
+                    <p>Group: 11</p>
+                    <img src="images/Cu.png" alt="Copper Structure">
+                </div>
+            </div>
+            <div class="element" id="zinc" onclick="toggleDetails(this, 'Zn', 30, 4, 12)">
+                Zn
+                <div class="element-details">
+                    <p>Symbol: Zn</p>
+                    <p>Period: 4</p>
+                    <p>Group: 12</p>
+                    <img src="images/Zn.png" alt="Zinc Structure">
+                </div>
+            </div>
+            <div class="element" id="gallium" onclick="toggleDetails(this, 'Ga', 31, 4, 13)">
+                Ga
+                <div class="element-details">
+                    <p>Symbol: Ga</p>
+                    <p>Period: 4</p>
+                    <p>Group: 13</p>
+                    <img src="images/Ga.png" alt="Gallium Structure">
+                </div>
+            </div>
+            <div class="element" id="germanium" onclick="toggleDetails(this, 'Ge', 32, 4, 14)">
+                Ge
+                <div class="element-details">
+                    <p>Symbol: Ge</p>
+                    <p>Period: 4</p>
+                    <p>Group: 14</p>
+                    <img src="images/Ge.png" alt="Germanium Structure">
+                </div>
+            </div>
+            <div class="element" id="arsenic" onclick="toggleDetails(this, 'As', 33, 4, 15)">
+                As
+                <div class="element-details">
+                    <p>Symbol: As</p>
+                    <p>Period: 4</p>
+                    <p>Group: 15</p>
+                    <img src="images/As.png" alt="Arsenic Structure">
+                </div>
+            </div>
+            <div class="element" id="selenium" onclick="toggleDetails(this, 'Se', 34, 4, 16)">
+                Se
+                <div class="element-details">
+                    <p>Symbol: Se</p>
+                    <p>Period: 4</p>
+                    <p>Group: 16</p>
+                    <img src="images/Se.png" alt="Selenium Structure">
+                </div>
+            </div>
+            <div class="element" id="bromine" onclick="toggleDetails(this, 'Br', 35, 4, 17)">
+                Br
+                <div class="element-details">
+                    <p>Symbol: Br</p>
+                    <p>Period: 4</p>
+                    <p>Group: 17</p>
+                    <img src="images/Br.png" alt="Bromine Structure">
+                </div>
+            </div>
+            <div class="element" id="krypton" onclick="toggleDetails(this, 'Kr', 36, 4, 18)">
+                Kr
+                <div class="element-details">
+                    <p>Symbol: Kr</p>
+                    <p>Period: 4</p>
+                    <p>Group: 18</p>
+                    <img src="images/Kr.png" alt="Krypton Structure">
+                </div>
+            </div>
+        </div>
+
+        <!-- Periodo 5 -->
+        <div class="period">
+            <div class="element" id="rubidium" onclick="toggleDetails(this, 'Rb', 37, 5, 1)">
+                Rb
+                <div class="element-details">
+                    <p>Symbol: Rb</p>
+                    <p>Period: 5</p>
+                    <p>Group: 1</p>
+                    <img src="images/Rb.png" alt="Rubidium Structure">
+                </div>
+            </div>
+            <div class="element" id="strontium" onclick="toggleDetails(this, 'Sr', 38, 5, 2)">
+                Sr
+                <div class="element-details">
+                    <p>Symbol: Sr</p>
+                    <p>Period: 5</p>
+                    <p>Group: 2</p>
+                    <img src="images/Sr.png" alt="Strontium Structure">
+                </div>
+            </div>
+            <div class="element" id="yttrium" onclick="toggleDetails(this, 'Y', 39, 5, 3)">
+                Y
+                <div class="element-details">
+                    <p>Symbol: Y</p>
+                    <p>Period: 5</p>
+                    <p>Group: 3</p>
+                    <img src="images/Y.png" alt="Yttrium Structure">
+                </div>
+            </div>
+            <div class="element" id="zirconium" onclick="toggleDetails(this, 'Zr', 40, 5, 4)">
+                Zr
+                <div class="element-details">
+                    <p>Symbol: Zr</p>
+                    <p>Period: 5</p>
+                    <p>Group: 4</p>
+                    <img src="images/Zr.png" alt="Zirconium Structure">
+                </div>
+            </div>
+            <div class="element" id="niobium" onclick="toggleDetails(this, 'Nb', 41, 5, 5)">
+                Nb
+                <div class="element-details">
+                    <p>Symbol: Nb</p>
+                    <p>Period: 5</p>
+                    <p>Group: 5</p>
+                    <img src="images/Nb.png" alt="Niobium Structure">
+                </div>
+            </div>
+            <div class="element" id="molybdenum" onclick="toggleDetails(this, 'Mo', 42, 5, 6)">
+                Mo
+                <div class="element-details">
+                    <p>Symbol: Mo</p>
+                    <p>Period: 5</p>
+                    <p>Group: 6</p>
+                    <img src="images/Mo.png" alt="Molybdenum Structure">
+                </div>
+            </div>
+            <div class="element" id="technetium" onclick="toggleDetails(this, 'Tc', 43, 5, 7)">
+                Tc
+                <div class="element-details">
+                    <p>Symbol: Tc</p>
+                    <p>Period: 5</p>
+                    <p>Group: 7</p>
+                    <img src="images/Tc.png" alt="Technetium Structure">
+                </div>
+            </div>
+            <div class="element" id="ruthenium" onclick="toggleDetails(this, 'Ru', 44, 5, 8)">
+                Ru
+                <div class="element-details">
+                    <p>Symbol: Ru</p>
+                    <p>Period: 5</p>
+                    <p>Group: 8</p>
+                    <img src="images/Ru.png" alt="Ruthenium Structure">
+                </div>
+            </div>
+            <div class="element" id="rhodium" onclick="toggleDetails(this, 'Rh', 45, 5, 9)">
+                Rh
+                <div class="element-details">
+                    <p>Symbol: Rh</p>
+                    <p>Period: 5</p>
+                    <p>Group: 9</p>
+                    <img src="images/Rh.png" alt="Rhodium Structure">
+                </div>
+            </div>
+            <div class="element" id="palladium" onclick="toggleDetails(this, 'Pd', 46, 5, 10)">
+                Pd
+                <div class="element-details">
+                    <p>Symbol: Pd</p>
+                    <p>Period: 5</p>
+                    <p>Group: 10</p>
+                    <img src="images/Pd.png" alt="Palladium Structure">
+                </div>
+            </div>
+            <div class="element" id="silver" onclick="toggleDetails(this, 'Ag', 47, 5, 11)">
+                Ag
+                <div class="element-details">
+                    <p>Symbol: Ag</p>
+                    <p>Period: 5</p>
+                    <p>Group: 11</p>
+                    <img src="images/Ag.png" alt="Silver Structure">
+                </div>
+            </div>
+            <div class="element" id="cadmium" onclick="toggleDetails(this, 'Cd', 48, 5, 12)">
+                Cd
+                <div class="element-details">
+                    <p>Symbol: Cd</p>
+                    <p>Period: 5</p>
+                    <p>Group: 12</p>
+                    <img src="images/Cd.png" alt="Cadmium Structure">
+                </div>
+            </div>
+            <div class="element" id="indium" onclick="toggleDetails(this, 'In', 49, 5, 13)">
+                In
+                <div class="element-details">
+                    <p>Symbol: In</p>
+                    <p>Period: 5</p>
+                    <p>Group: 13</p>
+                    <img src="images/In.png" alt="Indium Structure">
+                </div>
+            </div>
+            <div class="element" id="tin" onclick="toggleDetails(this, 'Sn', 50, 5, 14)">
+                Sn
+                <div class="element-details">
+                    <p>Symbol: Sn</p>
+                    <p>Period: 5</p>
+                    <p>Group: 14</p>
+                    <img src="images/Sn.png" alt="Tin Structure">
+                </div>
+            </div>
+            <div class="element" id="antimony" onclick="toggleDetails(this, 'Sb', 51, 5, 15)">
+                Sb
+                <div class="element-details">
+                    <p>Symbol: Sb</p>
+                    <p>Period: 5</p>
+                    <p>Group: 15</p>
+                    <img src="images/Sb.png" alt="Antimony Structure">
+                </div>
+            </div>
+            <div class="element" id="tellurium" onclick="toggleDetails(this, 'Te', 52, 5, 16)">
+                Te
+                <div class="element-details">
+                    <p>Symbol: Te</p>
+                    <p>Period: 5</p>
+                    <p>Group: 16</p>
+                    <img src="images/Te.png" alt="Tellurium Structure">
+                </div>
+            </div>
+            <div class="element" id="iodine" onclick="toggleDetails(this, 'I', 53, 5, 17)">
+                I
+                <div class="element-details">
+                    <p>Symbol: I</p>
+                    <p>Period: 5</p>
+                    <p>Group: 17</p>
+                    <img src="images/I.png" alt="Iodine Structure">
+                </div>
+            </div>
+            <div class="element" id="xenon" onclick="toggleDetails(this, 'Xe', 54, 5, 18)">
+                Xe
+                <div class="element-details">
+                    <p>Symbol: Xe</p>
+                    <p>Period: 5</p>
+                    <p>Group: 18</p>
+                    <img src="images/Xe.png" alt="Xenon Structure">
+                </div>
+            </div>
+        </div>
+
+        <!-- Periodo 6 -->
+        <div class="period">
+            <div class="element" id="cesium" onclick="toggleDetails(this, 'Cs', 55, 6, 1)">
+                Cs
+                <div class="element-details">
+                    <p>Symbol: Cs</p>
+                    <p>Period: 6</p>
+                    <p>Group: 1</p>
+                    <img src="images/Cs.png" alt="Cesium Structure">
+                </div>
+            </div>
+            <div class="element" id="barium" onclick="toggleDetails(this, 'Ba', 56, 6, 2)">
+                Ba
+                <div class="element-details">
+                    <p>Symbol: Ba</p>
+                    <p>Period: 6</p>
+                    <p>Group: 2</p>
+                    <img src="images/Ba.png" alt="Barium Structure">
+                </div>
+            </div>
+            <div class="element" id="lanthanum" onclick="toggleDetails(this, 'La', 57, 6, 3)">
+                La
+                <div class="element-details">
+                    <p>Symbol: La</p>
+                    <p>Period: 6</p>
+                    <p>Group: 3</p>
+                    <img src="images/La.png" alt="Lanthanum Structure">
+                </div>
+            </div>
+            <div class="element" id="cerium" onclick="toggleDetails(this, 'Ce', 58, 6, 4)">
+                Ce
+                <div class="element-details">
+                    <p>Symbol: Ce</p>
+                    <p>Period: 6</p>
+                    <p>Group: 4</p>
+                    <img src="images/Ce.png" alt="Cerium Structure">
+                </div>
+            </div>
+            <div class="element" id="praseodymium" onclick="toggleDetails(this, 'Pr', 59, 6, 5)">
+                Pr
+                <div class="element-details">
+                    <p>Symbol: Pr</p>
+                    <p>Period: 6</p>
+                    <p>Group: 5</p>
+                    <img src="images/Pr.png" alt="Praseodymium Structure">
+                </div>
+            </div>
+            <div class="element" id="neodymium" onclick="toggleDetails(this, 'Nd', 60, 6, 6)">
+                Nd
+                <div class="element-details">
+                    <p>Symbol: Nd</p>
+                    <p>Period: 6</p>
+                    <p>Group: 6</p>
+                    <img src="images/Nd.png" alt="Neodymium Structure">
+                </div>
+            </div>
+            <div class="element" id="promethium" onclick="toggleDetails(this, 'Pm', 61, 6, 7)">
+                Pm
+                <div class="element-details">
+                    <p>Symbol: Pm</p>
+                    <p>Period: 6</p>
+                    <p>Group: 7</p>
+                    <img src="images/Pm.png" alt="Promethium Structure">
+                </div>
+            </div>
+            <div class="element" id="samarium" onclick="toggleDetails(this, 'Sm', 62, 6, 8)">
+                Sm
+                <div class="element-details">
+                    <p>Symbol: Sm</p>
+                    <p>Period: 6</p>
+                    <p>Group: 8</p>
+                    <img src="images/Sm.png" alt="Samarium Structure">
+                </div>
+            </div>
+            <div class="element" id="europium" onclick="toggleDetails(this, 'Eu', 63, 6, 9)">
+                Eu
+                <div class="element-details">
+                    <p>Symbol: Eu</p>
+                    <p>Period: 6</p>
+                    <p>Group: 9</p>
+                    <img src="images/Eu.png" alt="Europium Structure">
+                </div>
+            </div>
+            <div class="element" id="gadolinium" onclick="toggleDetails(this, 'Gd', 64, 6, 10)">
+                Gd
+                <div class="element-details">
+                    <p>Symbol: Gd</p>
+                    <p>Period: 6</p>
+                    <p>Group: 10</p>
+                    <img src="images/Gd.png" alt="Gadolinium Structure">
+                </div>
+            </div>
+            <div class="element" id="terbium" onclick="toggleDetails(this, 'Tb', 65, 6, 11)">
+                Tb
+                <div class="element-details">
+                    <p>Symbol: Tb</p>
+                    <p>Period: 6</p>
+                    <p>Group: 11</p>
+                    <img src="images/Tb.png" alt="Terbium Structure">
+                </div>
+            </div>
+            <div class="element" id="dysprosium" onclick="toggleDetails(this, 'Dy', 66, 6, 12)">
+                Dy
+                <div class="element-details">
+                    <p>Symbol: Dy</p>
+                    <p>Period: 6</p>
+                    <p>Group: 12</p>
+                    <img src="images/Dy.png" alt="Dysprosium Structure">
+                </div>
+            </div>
+            <div class="element" id="holmium" onclick="toggleDetails(this, 'Ho', 67, 6, 13)">
+                Ho
+                <div class="element-details">
+                    <p>Symbol: Ho</p>
+                    <p>Period: 6</p>
+                    <p>Group: 13</p>
+                    <img src="images/Ho.png" alt="Holmium Structure">
+                </div>
+            </div>
+            <div class="element" id="erbium" onclick="toggleDetails(this, 'Er', 68, 6, 14)">
+                Er
+                <div class="element-details">
+                    <p>Symbol: Er</p>
+                    <p>Period: 6</p>
+                    <p>Group: 14</p>
+                    <img src="images/Er.png" alt="Erbium Structure">
+                </div>
+            </div>
+            <div class="element" id="thulium" onclick="toggleDetails(this, 'Tm', 69, 6, 15)">
+                Tm
+                <div class="element-details">
+                    <p>Symbol: Tm</p>
+                    <p>Period: 6</p>
+                    <p>Group: 15</p>
+                    <img src="images/Tm.png" alt="Thulium Structure">
+                </div>
+            </div>
+            <div class="element" id="ytterbium" onclick="toggleDetails(this, 'Yb', 70, 6, 16)">
+                Yb
+                <div class="element-details">
+                    <p>Symbol: Yb</p>
+                    <p>Period: 6</p>
+                    <p>Group: 16</p>
+                    <img src="images/Yb.png" alt="Ytterbium Structure">
+                </div>
+            </div>
+            <div class="element" id="lutetium" onclick="toggleDetails(this, 'Lu', 71, 6, 17)">
+                Lu
+                <div class="element-details">
+                    <p>Symbol: Lu</p>
+                    <p>Period: 6</p>
+                    <p>Group: 17</p>
+                    <img src="images/Lu.png" alt="Lutetium Structure">
+                </div>
+            </div>
+            <div class="element" id="hafnium" onclick="toggleDetails(this, 'Hf', 72, 6, 18)">
+                Hf
+                <div class="element-details">
+                    <p>Symbol: Hf</p>
+                    <p>Period: 6</p>
+                    <p>Group: 18</p>
+                    <img src="images/Hf.png" alt="Hafnium Structure">
+                </div>
+            </div>
+        </div>
+
+        <!-- Periodo 7 -->
+        <div class="period">
+            <div class="element" id="francium" onclick="toggleDetails(this, 'Fr', 87, 7, 1)">
+                Fr
+                <div class="element-details">
+                    <p>Symbol: Fr</p>
+                    <p>Period: 7</p>
+                    <p>Group: 1</p>
+                    <img src="images/Fr.png" alt="Francium Structure">
+                </div>
+            </div>
+            <div class="element" id="radium" onclick="toggleDetails(this, 'Ra', 88, 7, 2)">
+                Ra
+                <div class="element-details">
+                    <p>Symbol: Ra</p>
+                    <p>Period: 7</p>
+                    <p>Group: 2</p>
+                    <img src="images/Ra.png" alt="Radium Structure">
+                </div>
+            </div>
+            <div class="element" id="actinium" onclick="toggleDetails(this, 'Ac', 89, 7, 3)">
+                Ac
+                <div class="element-details">
+                    <p>Symbol: Ac</p>
+                    <p>Period: 7</p>
+                    <p>Group: 3</p>
+                    <img src="images/Ac.png" alt="Actinium Structure">
+                </div>
+            </div>
+            <div class="element" id="thorium" onclick="toggleDetails(this, 'Th', 90, 7, 4)">
+                Th
+                <div class="element-details">
+                    <p>Symbol: Th</p>
+                    <p>Period: 7</p>
+                    <p>Group: 4</p>
+                    <img src="images/Th.png" alt="Thorium Structure">
+                </div>
+            </div>
+            <div class="element" id="protactinium" onclick="toggleDetails(this, 'Pa', 91, 7, 5)">
+                Pa
+                <div class="element-details">
+                    <p>Symbol: Pa</p>
+                    <p>Period: 7</p>
+                    <p>Group: 5</p>
+                    <img src="images/Pa.png" alt="Protactinium Structure">
+                </div>
+            </div>
+            <div class="element" id="uranium" onclick="toggleDetails(this, 'U', 92, 7, 6)">
+                U
+                <div class="element-details">
+                    <p>Symbol: U</p>
+                    <p>Period: 7</p>
+                    <p>Group: 6</p>
+                    <img src="images/U.png" alt="Uranium Structure">
+                </div>
+            </div>
+            <div class="element" id="neptunium" onclick="toggleDetails(this, 'Np', 93, 7, 7)">
+                Np
+                <div class="element-details">
+                    <p>Symbol: Np</p>
+                    <p>Period: 7</p>
+                    <p>Group: 7</p>
+                    <img src="images/Np.png" alt="Neptunium Structure">
+                </div>
+            </div>
+            <div class="element" id="plutonium" onclick="toggleDetails(this, 'Pu', 94, 7, 8)">
+                Pu
+                <div class="element-details">
+                    <p>Symbol: Pu</p>
+                    <p>Period: 7</p>
+                    <p>Group: 8</p>
+                    <img src="images/Pu.png" alt="Plutonium Structure">
+                </div>
+            </div>
+            <div class="element" id="americium" onclick="toggleDetails(this, 'Am', 95, 7, 9)">
+                Am
+                <div class="element-details">
+                    <p>Symbol: Am</p>
+                    <p>Period: 7</p>
+                    <p>Group: 9</p>
+                    <img src="images/Am.png" alt="Americium Structure">
+                </div>
+            </div>
+            <div class="element" id="curium" onclick="toggleDetails(this, 'Cm', 96, 7, 10)">
+                Cm
+                <div class="element-details">
+                    <p>Symbol: Cm</p>
+                    <p>Period: 7</p>
+                    <p>Group: 10</p>
+                    <img src="images/Cm.png" alt="Curium Structure">
+                </div>
+            </div>
+            <div class="element" id="berkelium" onclick="toggleDetails(this, 'Bk', 97, 7, 11)">
+                Bk
+                <div class="element-details">
+                    <p>Symbol: Bk</p>
+                    <p>Period: 7</p>
+                    <p>Group: 11</p>
+                    <img src="images/Bk.png" alt="Berkelium Structure">
+                </div>
+            </div>
+            <div class="element" id="californium" onclick="toggleDetails(this, 'Cf', 98, 7, 12)">
+                Cf
+                <div class="element-details">
+                    <p>Symbol: Cf</p>
+                    <p>Period: 7</p>
+                    <p>Group: 12</p>
+                    <img src="images/Cf.png" alt="Californium Structure">
+                </div>
+            </div>
+            <div class="element" id="einsteinium" onclick="toggleDetails(this, 'Es', 99, 7, 13)">
+                Es
+                <div class="element-details">
+                    <p>Symbol: Es</p>
+                    <p>Period: 7</p>
+                    <p>Group: 13</p>
+                    <img src="images/Es.png" alt="Einsteinium Structure">
+                </div>
+            </div>
+            <div class="element" id="fermium" onclick="toggleDetails(this, 'Fm', 100, 7, 14)">
+                Fm
+                <div class="element-details">
+                    <p>Symbol: Fm</p>
+                    <p>Period: 7</p>
+                    <p>Group: 14</p>
+                    <img src="images/Fm.png" alt="Fermium Structure">
+                </div>
+            </div>
+            <div class="element" id="mendelevium" onclick="toggleDetails(this, 'Md', 101, 7, 15)">
+                Md
+                <div class="element-details">
+                    <p>Symbol: Md</p>
+                    <p>Period: 7</p>
+                    <p>Group: 15</p>
+                    <img src="images/Md.png" alt="Mendelevium Structure">
+                </div>
+            </div>
+            <div class="element" id="nobelium" onclick="toggleDetails(this, 'No', 102, 7, 16)">
+                No
+                <div class="element-details">
+                    <p>Symbol: No</p>
+                    <p>Period: 7</p>
+                    <p>Group: 16</p>
+                    <img src="images/No.png" alt="Nobelium Structure">
+                </div>
+            </div>
+            <div class="element" id="lawrencium" onclick="toggleDetails(this, 'Lr', 103, 7, 17)">
+                Lr
+                <div class="element-details">
+                    <p>Symbol: Lr</p>
+                    <p>Period: 7</p>
+                    <p>Group: 17</p>
+                    <img src="images/Lr.png" alt="Lawrencium Structure">
+                </div>
+            </div>
+            <div class="element" id="rutherfordium" onclick="toggleDetails(this, 'Rf', 104, 7, 18)">
+                Rf
+                <div class="element-details">
+                    <p>Symbol: Rf</p>
+                    <p>Period: 7</p>
+                    <p>Group: 18</p>
+                    <img src="images/Rf.png" alt="Rutherfordium Structure">
+                </div>
+            </div>
+            <div class="element" id="lawrencium" onclick="toggleDetails(this, 'Lr', 103, 7, 17)">
+                Lr
+                <div class="element-details">
+                    <p>Symbol: Lr</p>
+                    <p>Period: 7</p>
+                    <p>Group: 17</p>
+                    <img src="images/Lr.png" alt="Lawrencium Structure">
+                </div>
+            </div>
+            <div class="element" id="rutherfordium" onclick="toggleDetails(this, 'Rf', 104, 7, 18)">
+                Rf
+                <div class="element-details">
+                    <p>Symbol: Rf</p>
+                    <p>Period: 7</p>
+                    <p>Group: 18</p>
+                    <img src="images/Rf.png" alt="Rutherfordium Structure">
+                </div>
+            </div>
+            <div class="element" id="dubnium" onclick="toggleDetails(this, 'Db', 105, 7, 19)">
+                Db
+                <div class="element-details">
+                    <p>Symbol: Db</p>
+                    <p>Period: 7</p>
+                    <p>Group: 19</p>
+                    <img src="images/Db.png" alt="Dubnium Structure">
+                </div>
+            </div>
+            <div class="element" id="seaborgium" onclick="toggleDetails(this, 'Sg', 106, 7, 20)">
+                Sg
+                <div class="element-details">
+                    <p>Symbol: Sg</p>
+                    <p>Period: 7</p>
+                    <p>Group: 20</p>
+                    <img src="images/Sg.png" alt="Seaborgium Structure">
+                </div>
+            </div>
+            <div class="element" id="bohrium" onclick="toggleDetails(this, 'Bh', 107, 7, 21)">
+                Bh
+                <div class="element-details">
+                    <p>Symbol: Bh</p>
+                    <p>Period: 7</p>
+                    <p>Group: 21</p>
+                    <img src="images/Bh.png" alt="Bohrium Structure">
+                </div>
+            </div>
+            <div class="element" id="hassium" onclick="toggleDetails(this, 'Hs', 108, 7, 22)">
+                Hs
+                <div class="element-details">
+                    <p>Symbol: Hs</p>
+                    <p>Period: 7</p>
+                    <p>Group: 22</p>
+                    <img src="images/Hs.png" alt="Hassium Structure">
+                </div>
+            </div>
+            <div class="element" id="meitnerium" onclick="toggleDetails(this, 'Mt', 109, 7, 23)">
+                Mt
+                <div class="element-details">
+                    <p>Symbol: Mt</p>
+                    <p>Period: 7</p>
+                    <p>Group: 23</p>
+                    <img src="images/Mt.png" alt="Meitnerium Structure">
+                </div>
+            </div>
+            <div class="element" id="darwin" onclick="toggleDetails(this, 'Ds', 110, 7, 24)">
+                Ds
+                <div class="element-details">
+                    <p>Symbol: Ds</p>
+                    <p>Period: 7</p>
+                    <p>Group: 24</p>
+                    <img src="images/Ds.png" alt="Darwin Structure">
+                </div>
+            </div>
+            <div class="element" id="roentgenium" onclick="toggleDetails(this, 'Rg', 111, 7, 25)">
+                Rg
+                <div class="element-details">
+                    <p>Symbol: Rg</p>
+                    <p>Period: 7</p>
+                    <p>Group: 25</p>
+                    <img src="images/Rg.png" alt="Roentgenium Structure">
+                </div>
+            </div>
+            <div class="element" id="copernicium" onclick="toggleDetails(this, 'Cn', 112, 7, 26)">
+                Cn
+                <div class="element-details">
+                    <p>Symbol: Cn</p>
+                    <p>Period: 7</p>
+                    <p>Group: 26</p>
+                    <img src="images/Cn.png" alt="Copernicium Structure">
+                </div>
+            </div>
+            <div class="element" id="nihonium" onclick="toggleDetails(this, 'Nh', 113, 7, 27)">
+                Nh
+                <div class="element-details">
+                    <p>Symbol: Nh</p>
+                    <p>Period: 7</p>
+                    <p>Group: 27</p>
+                    <img src="images/Nh.png" alt="Nihonium Structure">
+                </div>
+            </div>
+            <div class="element" id="flourine" onclick="toggleDetails(this, 'Fl', 114, 7, 28)">
+                Fl
+                <div class="element-details">
+                    <p>Symbol: Fl</p>
+                    <p>Period: 7</p>
+                    <p>Group: 28</p>
+                    <img src="images/Fl.png" alt="Flourine Structure">
+                </div>
+            </div>
+            <div class="element" id="moscovium" onclick="toggleDetails(this, 'Mc', 115, 7, 29)">
+                Mc
+                <div class="element-details">
+                    <p>Symbol: Mc</p>
+                    <p>Period: 7</p>
+                    <p>Group: 29</p>
+                    <img src="images/Mc.png" alt="Moscovium Structure">
+                </div>
+            </div>
+            <div class="element" id="tennessine" onclick="toggleDetails(this, 'Ts', 116, 7, 30)">
+                Ts
+                <div class="element-details">
+                    <p>Symbol: Ts</p>
+                    <p>Period: 7</p>
+                    <p>Group: 30</p>
+                    <img src="images/Ts.png" alt="Tennessine Structure">
+                </div>
+            </div>
+            <div class="element" id="oganesson" onclick="toggleDetails(this, 'Og', 117, 7, 31)">
+                Og
+                <div class="element-details">
+                    <p>Symbol: Og</p>
+                    <p>Period: 7</p>
+                    <p>Group: 31</p>
+                    <img src="images/Og.png" alt="Oganesson Structure">
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="element-details" class="element-details" style="display: none;">
-        <button onclick="closeElementDetails()">Cerrar</button>
-        <div id="element-content">
-            <!-- Aquí se mostrará la información del elemento -->
-        </div>
-    </div>
-    <script src="script.js"></script>
 </body>
 </html>
